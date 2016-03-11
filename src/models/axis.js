@@ -131,7 +131,7 @@ nv.models.axis = function() {
                             textHeight = box.height;
                             if(width > maxTextWidth) maxTextWidth = width;
                         });
-                        rotateLabelsRule = 'rotate(' + rotateLabels + ' 0,' + (textHeight/2 + axis.tickPadding()) + ')';
+                        rotateLabelsRule = 'rotate(' + rotateLabels + ' 0,' + axis.tickPadding() + ')';
                         //Convert to radians before calculating sin. Add 30 to margin for healthy padding.
                         var sin = Math.abs(Math.sin(rotateLabels*Math.PI/180));
                         xLabelMargin = (sin ? sin*maxTextWidth : maxTextWidth)+30;
